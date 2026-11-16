@@ -1,0 +1,6 @@
+{
+  "name": "estante-a-venda",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "22.x" }
+}
