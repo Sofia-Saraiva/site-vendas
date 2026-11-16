@@ -81,7 +81,8 @@
       h+='<section class="sec"><div class="sec-head"><div><h2>'+esc(g.name)+'</h2><p>'+esc(g.sub)+'</p></div>';
       if(g.lot && pct>0 && mine.length===total){
         var sum=mine.reduce(function(a,i){return a+i.price},0);
-        h+='<span class="lot">Leve os '+total+' por '+brl(Math.round(sum*(1-pct/100)/5)*5)+'</span>';
+        var lotTxt='Leve os '+total+' por '+brl(Math.round(sum*(1-pct/100)/5)*5);
+        h+= waDigits() ? '<a class="lot" target="_blank" rel="noopener" href="'+esc(waLink('Oi! Vi sua Estante à Venda e quero levar os '+total+' volumes de '+g.name+' por '+brl(Math.round(sum*(1-pct/100)/5)*5)+'.'))+'">'+lotTxt+'</a>' : '<span class="lot">'+lotTxt+'</span>';
       }
       h+='</div>';
       if(g.banner && mine.length) h+='<div class="banner"><img src="img/'+esc(g.banner)+'.jpg" alt="Lombadas dos volumes de '+esc(g.name)+' empilhados"></div>';
