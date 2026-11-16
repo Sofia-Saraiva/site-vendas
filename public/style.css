@@ -49,14 +49,16 @@ button,input,select{font:inherit;color:inherit}
 .sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 16px;border-bottom:3px solid var(--ink);padding-bottom:8px}
 .sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(21px,5.4vw,30px);line-height:1.1;margin:0;text-wrap:balance}
 .sec-head p{margin:2px 0 0;color:var(--muted);font-size:14px}
-.lot{background:var(--accent);color:var(--on-accent);font-weight:700;border-radius:8px;padding:7px 12px;font-size:14px;font-variant-numeric:tabular-nums;transform:rotate(-1.2deg)}
+.lot{background:var(--accent);color:var(--on-accent);font-weight:700;border-radius:8px;padding:7px 12px;font-size:14px;font-variant-numeric:tabular-nums;transform:rotate(-1.2deg);text-decoration:none;display:inline-block}
+a.lot{cursor:pointer;transition:transform .15s}
+a.lot:hover,a.lot:focus-visible{transform:rotate(-1.2deg) scale(1.05)}
 .banner{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--tint)}
 .banner img{width:100%;max-height:230px;object-fit:cover}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .ph{position:relative;background:var(--tint)}
-.ph img{width:100%;aspect-ratio:440/567;object-fit:cover}
+.ph img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain}
 .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:8px;flex:1}
 .body h3{margin:0;font-size:15px;line-height:1.25;font-weight:700}
 .body h3 b{display:block;font-family:var(--display);font-weight:400;font-size:19px}
